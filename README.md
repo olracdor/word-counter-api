@@ -77,32 +77,47 @@ curl --request POST \
 **Sample Response**
 
 ```json
-[
-  {
-    "key": "the",
-    "word": "THE",
-    "count": 75,
-    "average": 8
-  },
-  {
-    "key": "and",
-    "word": "AND",
-    "count": 37,
-    "average": 8
-  },
-  {
-    "key": "collection",
-    "word": "COLLECTION",
-    "count": 33,
-    "average": 8
-  },
-  {
-    "key": "of",
-    "word": "OF",
-    "count": 32,
-    "average": 8
-  }
-]
+{
+  "average": 2,
+  "words": [
+    {
+      "word": "Search",
+      "count": 3
+    },
+    {
+      "word": "search",
+      "count": 3
+    },
+    {
+      "word": "Google",
+      "count": 3
+    },
+    {
+      "word": "you",
+      "count": 3
+    },
+    {
+      "word": "if",
+      "count": 2
+    },
+    {
+      "word": "Images",
+      "count": 2
+    },
+    {
+      "word": "Maps",
+      "count": 2
+    },
+    {
+      "word": "Play",
+      "count": 2
+    },
+    {
+      "word": "YouTube",
+      "count": 2
+    }
+  ]
+}
 ```
 
 Get all recorded word counts
