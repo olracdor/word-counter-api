@@ -27,16 +27,7 @@ namespace WordCounter.Commands
 
         public async Task<IList<TableResult>> Handle(SaveWordCountCommand request, CancellationToken cancellationToken)
         {
-            foreach(Word word in request.words)
-            {
-                _wordCountContext.Add(new WordCount(word.word, word.count, request.Url));
-            }
-
-            _ = _wordCountContext.SaveChanges();
-
-
-
-            return await _wordCountContext.SaveChanges();
+            return await _wordCountContext.UpsertWords(request.words, request.Url);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace WordCounter.Controllers
 
         [HttpGet]
         [Route("count")]
-        public IActionResult GetWords([FromQuery] UrlRequest urlRequest)
+        public IActionResult GetWords()
         {
             var result = _getWordsService.GetWords();
             return Ok(result);

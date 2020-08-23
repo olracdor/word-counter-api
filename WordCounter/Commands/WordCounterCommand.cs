@@ -60,7 +60,7 @@ namespace WordCounter.Commands
             }
 
             words = words.SortedTopWords(100);
-            int avg = (int)words.Average(word => word.count);
+            int avg = (int) words.Average(word => word.count);
 
             _ = _mediator.Send(new SaveWordCountCommand { Url = request.Url, words= words });
             
